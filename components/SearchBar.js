@@ -5,9 +5,8 @@ import Icon from '@expo/vector-icons/Ionicons';
 const SearchBar = () => {
   return (
     <View>
-        
+        <TextInput placeholder= 'Type Here to search' style={styles.input}/> 
         <TouchableOpacity style = {styles.button} >
-            <TextInput placeholder= 'Type Here to search'/> 
             <Icon name="search-outline" size = {20} style={styles.magnifybutton}> </Icon>
         </TouchableOpacity>
         
