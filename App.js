@@ -1,14 +1,40 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { Text, View, StyleSheet, FlatList  } from 'react-native';
+import  Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import Icon from '@expo/vector-icons/FontAwesome';
+import Feed from './components/Feed';
 
-const YourApp = () => {
+
+const Main = () => {
+  const[items, setItems] = useState([
+    {key: 'Feed#1'}, 
+    {key:'Feed#2'}, 
+    {key: 'Feed#3'},
+]); 
+
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>
-        Hello  🎉
-      </Text>
+    <View style={styles.container}>
+      <Header/>
+      <SearchBar/>
+      <FlatList data={items}
+        renderItem = {({item}) => 
+      <Feed item={item} />}
+      />
     </View>
   );
 }
-// adding comment testing make Button
-export default YourApp;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 60,
+  },
+  text: {
+    fontSize: 30,
+
+  }
+});
+
+
+export default Main;
