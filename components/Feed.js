@@ -1,22 +1,15 @@
 import React, {useState} from 'react';
-import { Text, View, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from '@expo/vector-icons/Ionicons';
 
 
-const Feed = () => {
-    const[items, setItems] = useState([
-        {key: 'Feed#1'}, 
-        {key:'Feed#2'}, 
-        {key: 'Feed#3'},
-    ]); 
+const Feed = ({item}) => {
+
 
   return (
     <TouchableOpacity style={styles.listFeed}>
     <View style={styles}>
-
-        <FlatList data={items}
-        renderItem = {({item}) => <Text style={styles.item}>{item.key} </Text>} 
-        />
+        <Text style={styles.item}>{item.key} </Text>
     </View>
     </TouchableOpacity>
   );
