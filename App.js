@@ -1,14 +1,30 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { Text, View, StyleSheet  } from 'react-native';
+import  Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import Icon from '@expo/vector-icons/FontAwesome';
+import Feed from './components/Feed';
 
-const YourApp = () => {
+const Main = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>
-        Hello  🎉
-      </Text>
+    <View style={styles.container}>
+      <Header/>
+      <SearchBar/>
+      <Feed/>
     </View>
   );
 }
 
-export default YourApp;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 60,
+  },
+  text: {
+    fontSize: 30,
+
+  }
+});
+
+
+export default Main;
