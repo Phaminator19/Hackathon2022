@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "560048413431",
+    "project_id": "anonymousqa-a6743",
+    "storage_bucket": "anonymousqa-a6743.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560048413431:android:150cfe269caf198ea2d1f2",
+        "android_client_info": {
+          "package_name": "hackathon.anonymousQA"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560048413431-psd7pdk3bcpl31qatl35jgnpn4hmqekl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxauJwbBzl6O6ZzPp6IsXELeydH9LRSEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560048413431-psd7pdk3bcpl31qatl35jgnpn4hmqekl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
