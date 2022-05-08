@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from '@expo/vector-icons/Ionicons';
 import { endAt } from 'firebase/firestore';
