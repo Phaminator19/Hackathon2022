@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Text, View, StyleSheet, FlatList  } from 'react-native';
 import  Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import Icon from '@expo/vector-icons/FontAwesome';
 import Feed from './components/Feed';
 import {getFirestore, collection, addDoc, Timestamp} from "firebase/firestore";
-import {addPost, addReplyToPost} from "./backend/apis"
+import {addPost, addReplyToPost, getAllRecords} from "./backend/apis"
 import { Alert } from "react-native";
-import db from './firebaseConfig.js';
+
+
 
 const Main = () => {
   const[items, setItems] = useState([
@@ -23,6 +24,12 @@ const Main = () => {
       Alert.alert("Cannot post. Error occur");
     }
   }
+  useEffect(()=>{
+    const getAll = async ()=>{
+      await getAllRecords();
+    }
+    getAll()
+  })
 
   return (
     <View style={styles.container}>
