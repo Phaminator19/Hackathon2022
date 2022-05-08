@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <View style={styles.header}>
       <Text style = {styles.text}>
-        Hello World
+        QandA
       </Text>
     </View>
   );
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffc8dd'
   },
   text: {
+    fontWeight: 'bold',
     fontSize: 23,
     textAlign: 'center', 
   },

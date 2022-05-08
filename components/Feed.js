@@ -11,7 +11,8 @@ import { endAt } from 'firebase/firestore';
 
 
 const Feed = ({item}) => {
-
+    let a = item.replies;
+    console.log(a)
 
   return (
     <TouchableOpacity style={styles.listFeed}>
@@ -19,7 +20,7 @@ const Feed = ({item}) => {
         <Text style={styles.item}>{item.question} </Text>
         <Text style={styles.timePassed}>{item.timePassed} </Text>
         <Text style={styles.createBy}>By Anonymous </Text>
-        {console.log(item.replies)}
+        {/* {console.log(item.replies.length)} */}
         {/* {item.replies.map((reply)=>{
         return <View style={styles.replies}>
                     <Text style={styles.item}>{reply.reply} </Text>
